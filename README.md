@@ -21,3 +21,11 @@ export class RedisService implements OnModuleInit {
 }
 ```
 ---
+
+#### file-folder banaw: `product-service/src/guards/rate-limit.guard.ts`
+```ts
+
+```
+---
+
+
