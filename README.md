@@ -144,3 +144,8 @@ sudo systemctl start redis-server
 npx nx serve product-service
 ```
 ---
+
+> 5 bar er beshi reload korle error dibe
+<img width="591" height="230" alt="image" src="https://github.com/user-attachments/assets/2f7d2b5f-419e-4ef4-8db5-73b216879e24" />
+
+<img width="693" height="175" alt="image" src="https://github.com/user-attachments/assets/319464be-38c0-4481-a792-a7c177bf2136" />
