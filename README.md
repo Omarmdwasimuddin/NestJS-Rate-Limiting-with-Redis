@@ -54,9 +54,44 @@ export class RateLimitGuard implements CanActivate{
 ---
 
 
-####
+#### product-service/src/app/app.controller.ts
 ```ts
+import { Controller, Get, Param, Patch, UseGuards } from '@nestjs/common';
+import { AppService } from './app.service';
+import { RateLimitGuard } from '../guards/rate-limit.guard';
 
+@Controller()
+export class AppController {
+  constructor(private readonly appService: AppService) {}
+
+  @Get('products/:id')
+  async getProduct(@Param('id') id: string) {
+    return this.appService.getProducts(Number(id));
+  }
+
+  @Patch('products/:id/:price')
+  async updateProduct(
+    @Param('id') id: string,
+    @Param('price') price: string,
+  ) {
+    return this.appService.updateProduct(Number(id), Number(price));
+  }
+
+  @Get('products')
+  @UseGuards(
+    RateLimitGuard
+  )
+  getProducts(){
+    return {
+      success: true,
+      products: [
+        'Laptop',
+        'Tablet',
+        'iPhone',
+      ]
+    }
+  }
+}
 ```
 ---
 
