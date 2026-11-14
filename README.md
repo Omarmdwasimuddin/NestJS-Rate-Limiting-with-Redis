@@ -134,7 +134,7 @@ export class AppModule {}
 
 
 ####
-```ts
-
+```bash
+npx nx serve product-service
 ```
 ---
