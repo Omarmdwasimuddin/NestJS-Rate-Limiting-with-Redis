@@ -133,7 +133,13 @@ export class AppModule {}
 ---
 
 
-####
+#### Setup Redis Server on WSL Ubuntu
+```bash
+wsl -d Ubuntu
+```
+```bash
+sudo systemctl start redis-server
+```
 ```bash
 npx nx serve product-service
 ```
